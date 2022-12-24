@@ -6,46 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Direção Player</title>
+    <!-- Link style.css -->
     <link rel="stylesheet" href="./assets/css/style.css">
+
+    <style>
+        *, *::before, *::after{margin: 0; padding: 0;}
+        .video-container{width: 500px;}
+    </style>
 
 </head>
 
 <body>
 
-    <div class="player-video">
-        
-        <video class="video-view" poster="./assets/img/capa.jpeg" preload="none">
-            <source src="https://www.youtube.com/watch?v=f5lX2Len6ys"> 
-        </video> 
+    <form class="video-container" action="" method="GET">
 
-        <div class="video-preloader"></div>
+        <!-- Chamar elemento vídeo com class player-video -->
+        <video preload="none" class="player-video">
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            <!-- <track kind="captions" src="legenda.vtt" default> -->
+        </video>
 
-        <div class="video-controls">
+    </form>
 
-            <div class="video-progress-bar float-left">
-                <div class="video-loader"></div>
-                <div class="video-progress"></div>
-            </div>
+    <!-- Inclusão player -->
+    <script src="./assets/js/main.js" async></script>
 
-            <div class="video-play float-left video-btn"></div>
-            <div class="video-next float-left video-btn"></div>
-            <div class="video-volume float-left video-btn"></div>
-
-            <div class="slide float-left">
-                <div class="slide-vol"></div>
-            </div>
-
-            <div class="video-time float-left">00:00/00:00</div>
-            <div class="video-screen float-right video-btn"></div>
-
-        </div>
-
-        <div class="clear"></div>
-
-    </div>
-
-
-<script src="./assets/js/main.js"></script>
 </body>
 
 </html>
+
