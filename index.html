@@ -1,36 +1,82 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Direção Player</title>
-    <!-- Link style.css -->
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Youtube Clone</title>
 
-    <style>
-        *, *::before, *::after{margin: 0; padding: 0;}
-        .video-container{width: 500px;}
-    </style>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/youtube.css">
 
 </head>
-
 <body>
 
-    <form class="video-container" action="" method="GET">
+    <nav class="navbar">
+        <div class="toggle-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <img src="assets/img/logo.PNG" class="logo" alt="">
+        <div class="search-box">
+            <input type="text" class="search-bar" placeholder="search">
+            <button class="search-btn"><img src="assets/img/search.PNG" alt=""></button>
+        </div>
+        <div class="user-options">
+            <img src="assets/img/video.PNG" class="icon" alt="">
+            <img src="assets/img/grid.PNG" class="icon" alt="">
+            <img src="assets/img/bell.PNG" class="icon" alt="">
+            <div class="user-dp">
+                <img src="assets/img/profile-pic.png" alt="">
+            </div>
+        </div>
+    </nav>
 
-        <!-- Chamar elemento vídeo com class player-video -->
-        <video preload="none" class="player-video">
-            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-        </video>
+    <!-- sidebar -->
+    <div class="side-bar">
+        <a href="#" class="links active"><img src="assets/img/home.PNG" alt="">home</a>
+        <a href="#" class="links"><img src="assets/img/explore.PNG" alt="">explore</a>
+        <a href="#" class="links"><img src="assets/img/subscription.PNG" alt="">subscription</a>
+        <hr class="seperator">
+        <a href="#" class="links"><img src="assets/img/library.PNG" alt="">library</a>
+        <a href="#" class="links"><img src="assets/img/history.PNG" alt="">history</a>
+        <a href="#" class="links"><img src="assets/img/your-video.PNG" alt="">your video</a>
+        <a href="#" class="links"><img src="assets/img/watch-later.PNG" alt="">watch leater</a>
+        <a href="#" class="links"><img src="assets/img/liked video.PNG" alt="">like video</a>
+        <a href="#" class="links"><img src="assets/img/show more.PNG" alt="">show more</a>
+    </div>
 
-    </form>
+    <!-- filters -->
+    <div class="filters">
+        <button class="filter-options active">all</button>
+        <button class="filter-options">CSS</button>
+        <button class="filter-options">web development</button>
+        <button class="filter-options">python</button>
+        <button class="filter-options">entertainment</button>
+        <button class="filter-options">marvel</button>
+        <button class="filter-options">javascript</button>
+        <button class="filter-options">artificial intelligence</button>
+        <button class="filter-options">machine learning</button>
+        <button class="filter-options">trending</button>
+    </div>
 
-    <!-- Inclusão player -->
-    <script src="./assets/js/main.js" async></script>
+    <!-- videos -->
+    <div class="video-container">
+         <div class="video">
+            <img src="assets/img/capa.jpeg" class="thumbnail" alt="">
+            <div class="content">
+                <img src="assets/img/profile-pic.png" class="channel-icon" alt="">
+                <div class="info">
+                    <h4 class="title"><a href="player.html"> AVATAR 2: O CAMINHO DA ÁGUA SURPREENDE OU DECEPCIONA? VEJA O QUE ACHAMOS! | Veredito</a></h4>
+                    <p class="channel-name">omeleteve</p>
+                </div>
+            </div>
+        </div> 
+    </div>
 
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script src="youtube.js"></script>
+    <script src ="main.js"></script>
+    
 </body>
-
 </html>
-
