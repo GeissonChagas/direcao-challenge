@@ -1,0 +1,70 @@
+#video{
+    grid-area: a;
+    height: 70vh;
+    width: 95%;
+
+}
+
+#playlist{
+    grid-area: b;
+    height: 100vh;
+}
+
+#description{
+    grid-area: c;
+    height: 30vh;
+    width: 100%;
+
+}
+
+
+.container-grid{
+    display: grid;
+    gap: 5px;
+    margin-top: 5em;
+    grid-template-areas:
+    "a . b"
+    ". . b"
+    "c . b";
+    width: 100%;
+    height: 50%;
+}
+
+.float-left{
+    float: left;
+}
+
+.float-right{
+    float: right;
+}
+
+.clear{
+    clear: both;
+}
+
+.video-container2{
+    margin: 2em 0 1em 2em;    
+
+}
+
+.playlist{
+    margin: 2em 2em 0 0;
+}
+
+.player-video{
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+}
+
+.video-view{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+

@@ -7,29 +7,89 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Direção Player</title>
     <!-- Link style.css -->
-    <link rel="stylesheet" href="./assets/css/style.css">
-
-    <style>
-        *, *::before, *::after{margin: 0; padding: 0;}
-        .video-container{width: 500px;}
-    </style>
+    <link rel="stylesheet" href="./assets/css/player.css">
+    <link rel="stylesheet" href="./assets/css/youtube.css">
 
 </head>
 
 <body>
+        <nav class="navbar">
+            <div class="toggle-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <img src="assets/img/logo.PNG" class="logo" alt="">
+            <div class="search-box">
+                <input type="text" class="search-bar" placeholder="search">
+                <button class="search-btn"><img src="assets/img/search.PNG" alt=""></button>
+            </div>
+            <div class="user-options">
+                <img src="assets/img/video.PNG" class="icon" alt="">
+                <img src="assets/img/grid.PNG" class="icon" alt="">
+                <img src="assets/img/bell.PNG" class="icon" alt="">
+                <div class="user-dp">
+                    <img src="assets/img/profile-pic.png" alt="">
+                </div>
+            </div>
+        </nav>
+        <div class="container-grid">
 
-    <form class="video-container" action="" method="GET">
+            <div class="video-container2" id="video">
 
-        <!-- Chamar elemento vídeo com class player-video -->
-        <video preload="none" class="player-video">
-            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-            <!-- <track kind="captions" src="legenda.vtt" default> -->
-        </video>
+                <div class="player-video">
+                    <video src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" class="video-view" id="video"></video>
 
-    </form>
+                    <div class="video-preloader"></div>
 
-    <!-- Inclusão player -->
-    <script src="./assets/js/main.js" async></script>
+                    <div class="video-controls">
+                        <div class="progress-bar">
+                            <div class="video-loader"></div>
+                            <div class="video-progress"></div>
+                        </div>
+                        <div class="video-play"></div>
+                        <div class="video-next"></div>
+                        <div class="video-volume"></div>
+                        <div class="slide">
+                            <div class="slider-vol"></div>
+                        </div>
+                        <div class="video-time">00:00/00:00</div>
+                        <div class="video-fullscreen"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="playlist" id="playlist">
+                <div class="playlist-capa">
+                    <img src="https://i.ytimg.com/an_webp/KitbaxPkik4/mqdefault_6s.webp?du=3000&sqp=CPbTq50G&rs=AOn4CLBjyD4QzlJ2o65eXJbp9MdyX1px9A" alt="">
+                </div>
+                <div class="playlist-titulo">
+                    <h3>CSS GRID - CRIE LAYOUTS RESNPONSIVOS</h3>
+                </div>
+                <div class="playlist-canal">
+                    <p>LayerComp</p>
+                </div>
+            </div>
+
+
+            <div id="description">
+                <div class="canal-nome">
+                    <div class="inscrever"></div>
+                    <div class="like"></div>
+                    <div class="dislike"></div>
+                    <div class="compartilhar"></div>
+                    <div class="download"></div>
+                    <div class="valeu"></div>
+                </div>
+                <div class="description">
+                    <h3 class="description__title"></h3>AVATAR 2: O CAMINHO DA ÁGUA SURPREENDE OU DECEPCIONA? VEJA O QUE ACHAMOS! | Veredito</h3>
+                </div>
+            </div>
+        </div>
+
+
+    <!-- Inclusão arquivos js -->
+    <script src="./assets/js/main.js"></script>
 
 </body>
 
